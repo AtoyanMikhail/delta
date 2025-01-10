@@ -1,59 +1,31 @@
-[![progress-banner](https://backend.codecrafters.io/progress/git/981e8bef-0d8b-4f14-9938-c0cc2a7d1ea4)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
 
-This is a starting point for Go solutions to the
-["Build Your Own Git" Challenge](https://codecrafters.io/challenges/git).
+## Run Locally
 
-In this challenge, you'll build a small Git implementation that's capable of
-initializing a repository, creating commits and cloning a public repository.
-Along the way we'll learn about the `.git` directory, Git objects (blobs,
-commits, trees etc.), Git's transfer protocols and more.
+Clone the project
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
-
-# Passing the first stage
-
-The entry point for your Git implementation is in `cmd/mygit/main.go`. Study and
-uncomment the relevant code, and push your changes to pass the first stage:
-
-```sh
-git commit -am "pass 1st stage" # any msg
-git push origin master
+```bash
+  git clone https://github.com/AtoyanMikhail/delta.git
 ```
 
-That's all!
+Go to the project directory
 
-# Stage 2 & beyond
-
-Note: This section is for stages 2 and beyond.
-
-1. Ensure you have `go` installed locally
-1. Run `./your_program.sh` to run your Git implementation, which is implemented
-   in `cmd/mygit/main.go`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
-
-# Testing locally
-
-The `your_program.sh` script is expected to operate on the `.git` folder inside
-the current working directory. If you're running this inside the root of this
-repository, you might end up accidentally damaging your repository's `.git`
-folder.
-
-We suggest executing `your_program.sh` in a different folder when testing
-locally. For example:
-
-```sh
-mkdir -p /tmp/testing && cd /tmp/testing
-/path/to/your/repo/your_program.sh init
+```bash
+  cd delta
 ```
 
-To make this easier to type out, you could add a
-[shell alias](https://shapeshed.com/unix-alias/):
+Install go 1.22 or higher with
 
-```sh
-alias mygit=/path/to/your/repo/your_program.sh
+```bash
+sudo snap install go 1.22 --classic
+```
 
-mkdir -p /tmp/testing && cd /tmp/testing
-mygit init
+Install dependencies 
+
+```bash
+go mod tidy
+```
+
+Build the project with
+```bash
+./build.sh
 ```
